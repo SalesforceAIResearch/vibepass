@@ -1,0 +1,27 @@
+"""Prompt templates for VIBEPASS evaluation tasks."""
+
+from .task1_fttest import (
+    PROMPT_FT_TEST_AWARE,
+    PROMPT_FT_TEST_DISCOVERY,
+)
+from .task2_fpr import (
+    PROMPT_FPR_GIVEN_TEST,
+    PROMPT_FPR_SELF_TEST,
+    PROMPT_FPR_NO_TEST,
+)
+from .codegen import (
+    PROMPT_CODEGEN_LEETCODE,
+    PROMPT_CODEGEN_ATCODER,
+    PROMPT_CODEGEN_CODEFORCES,
+)
+
+__all__ = [
+    'PROMPT_FT_TEST_AWARE',
+    'PROMPT_FT_TEST_DISCOVERY',
+    'PROMPT_FPR_GIVEN_TEST',
+    'PROMPT_FPR_SELF_TEST',
+    'PROMPT_FPR_NO_TEST',
+    'PROMPT_CODEGEN_LEETCODE',
+    'PROMPT_CODEGEN_ATCODER',
+    'PROMPT_CODEGEN_CODEFORCES',
+]
