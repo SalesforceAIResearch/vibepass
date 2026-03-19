@@ -1,6 +1,6 @@
 # VIBEPASS: Can Vibe Coders Really Pass the Vibe Check?
 
-Benchmark for evaluating LLMs on corner case generation, code judgment, and debugging.
+Benchmark for evaluating LLMs on corner case generation, code judgment, and debugging. This dataset was generated using GPT, Gemini, and Claude and should not be used to develop competing models.
 
 ## Quick Start
 
