@@ -2,6 +2,10 @@
 
 Benchmark for evaluating LLMs on corner case generation, code judgment, and debugging. This dataset was generated using GPT, Gemini, and Claude and should not be used to develop competing models.
 
+📄 **Paper**: [https://arxiv.org/abs/2603.15921](https://arxiv.org/abs/2603.15921)
+
+🤗 **Dataset**: [https://huggingface.co/datasets/Salesforce/vibepass](https://huggingface.co/datasets/Salesforce/vibepass)
+
 ## Quick Start
 
 ```bash
@@ -17,8 +21,7 @@ python src/eval.py \
   --input data/benchmark.jsonl \
   --output outputs/results.jsonl \
   --model sonnet4.5 \
-  --task corner_case \
-  --mode wo_checker_direct
+  --task corner_case
 ```
 
 ## Models
@@ -30,9 +33,9 @@ python src/eval.py \
 
 ## Tasks
 
-**Corner Case**: `wo_checker_direct`, `with_checker_direct`, `with_checker_cot`  
-**Judge**: `judge_buggy`, `judge_correct_model`, `judge_correct_human`  
-**Debug**: `debug_given_test_oracle`, `debug_given_test_generated`, `debug_no_test`, `debug_no_test_react`
+- **corner_case**: Generate test cases that expose bugs in implementations
+- **judge**: Evaluate whether a solution is correct or buggy
+- **debug**: Fix buggy implementations
 
 ## Arguments
 
@@ -40,8 +43,7 @@ python src/eval.py \
 --input FILE           # Input JSONL
 --output FILE          # Output JSONL
 --model MODEL          # Model name
---task TASK            # corner_case, judge, debug
---mode MODE            # Task mode
+--task TASK            # corner_case, judge, or debug
 --lcb_data PATH        # LCB data (default: curation/data/lcb/test*.jsonl)
 --timeout SECONDS      # Default: 60
 --num_process_generate # Default: 16
@@ -111,8 +113,13 @@ Returns:
 ## Citation
 
 ```bibtex
-@article{vibepass2025,
+@misc{bansal2026vibepassvibecodersreally,
   title={VIBEPASS: Can Vibe Coders Really Pass the Vibe Check?},
-  year={2025}
+  author={Srijan Bansal and Jiao Fangkai and Yilun Zhou and Austin Xu and Shafiq Joty and Semih Yavuz},
+  year={2026},
+  eprint={2603.15921},
+  archivePrefix={arXiv},
+  primaryClass={cs.SE},
+  url={https://arxiv.org/abs/2603.15921}
 }
 ```
